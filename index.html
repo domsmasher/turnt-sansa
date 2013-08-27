@@ -4,14 +4,35 @@
     <title></title>
 </head>
 <body>
-
+<div id="testId">AAAAAAAAAAAAAAAAAAAA!</div>
+<div id="testId2">BBBBBBBBBBBBBBBBbbbbbbbbbb!</div>
 <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
 <script src="wp_widget.js" type="text/javascript"></script>
 <script type="text/javascript">
     var myWidget = Wp_Widget.extend({
         initialize: function () {
             console.log('myWidget');
-        }
+        },
+        cid: 'sfsfsf',
+        events: {
+            'click #testId ' : function () {
+                console.log('element clicked')
+            }
+        },
+        $el: $('body')
+    });
+
+    var myWidget2 = Wp_Widget.extend({
+        initialize: function () {
+            console.log('myWidget 2');
+        },
+        cid: 'sfsfsf',
+        events: {
+            'click #testId2' : function () {
+                console.log('element clicked 2')
+            }
+        },
+        $el: $('body')
     });
 </script>
 </body>
