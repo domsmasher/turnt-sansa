@@ -36,7 +36,9 @@ $.extend(Wp_Widget.prototype, {
 
 Wp_Widget.extend = function (options) {
     $.extend(Wp_Widget.prototype, options);
-    return new Wp_Widget();
+
+    //return new WP_Widget;
+    return Wp_Widget;
 };
 
 
